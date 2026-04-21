@@ -2052,10 +2052,10 @@
 <section class="founder">
   <div class="founder-inner reveal">
     <div class="founder-photo-col">
-      <img src="assets/icons/favicongc.png" alt="Founder of Ghostcode" class="founder-photo" />
+      <img src="assets/images/sam-headshot.png" alt="Founder of Ghostcode" class="founder-photo" />
     </div>
     <div class="founder-text-col">
-      <p class="founder-eyebrow">Why Ghostcode Exists</p>
+      <p class="founder-eyebrow">About Us</p>
       <h2 class="founder-headline">Built by a creator,<br /><em>for creators.</em></h2>
       <div class="founder-body">
         <p>I started as an online graphic designer. I grew an audience of over half a million followers — people who trusted my taste, my work, and my voice. Then I asked myself: what if I built something for them?</p>
@@ -2073,84 +2073,99 @@
 <style>
   .founder {
     border-top: 1px solid var(--border);
-    background: linear-gradient(180deg, #ffffff 0%, #fbf9f5 100%);
-    padding: 128px 48px;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f4ec 100%);
+    padding: 120px 48px;
     overflow: hidden;
   }
   .founder-inner {
     display: grid;
-    grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.45fr);
-    gap: 56px;
-    max-width: 1140px;
+    grid-template-columns: minmax(320px, 0.88fr) minmax(0, 1.4fr);
+    gap: 0;
+    max-width: 1160px;
     margin: 0 auto;
     align-items: center;
+    border: 1px solid rgba(26,23,20,0.12);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 24px 52px rgba(26,23,20,0.08);
   }
   .founder-photo-col {
-    background: #f2ede4;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 14px;
+    background: linear-gradient(165deg, #efe7d9 0%, #e6ddce 100%);
     overflow: hidden;
-    aspect-ratio: 1 / 1;
+    min-height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    box-shadow: 0 20px 48px rgba(26,23,20,0.08);
+    padding: 28px;
   }
   .founder-photo-col img {
     width: 100%;
-    height: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    height: auto;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 16%;
     display: block;
-    border-radius: 6px;
+    border-radius: 12px;
+    filter: saturate(0.94) contrast(1.01);
+    box-shadow: 0 16px 36px rgba(26,23,20,0.12);
   }
   .founder-text-col {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #ffffff;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 56px 52px;
+    background: transparent;
+    padding: 64px 58px 58px;
+    position: relative;
+  }
+  .founder-text-col::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 84px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 14px 0 8px 0;
   }
   .founder-eyebrow {
     font-family: 'DM Sans', sans-serif;
     font-size: 12px;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: rgba(26,23,20,0.35);
-    margin-bottom: 24px;
+    margin-bottom: 22px;
   }
   .founder-headline {
     font-family: 'Avantt', sans-serif;
     font-weight: 800;
-    font-size: clamp(40px, 5vw, 76px);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-size: clamp(40px, 5vw, 74px);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
     text-transform: uppercase;
     color: var(--black);
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
   .founder-headline em {
     font-family: 'Perfectly Nineties', serif;
     font-style: italic;
     text-transform: none;
     font-weight: 400;
-    font-size: 1.05em;
+    font-size: 1.08em;
   }
   .founder-body {
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    margin-bottom: 40px;
+    gap: 16px;
+    margin-bottom: 30px;
   }
   .founder-body p {
     font-family: 'DM Sans', sans-serif;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 1.8;
+    line-height: 1.85;
     color: var(--ghost);
     max-width: 62ch;
   }
@@ -2166,28 +2181,29 @@
     text-transform: uppercase;
     color: var(--black);
     text-decoration: none;
-    border: 1px solid var(--border);
+    border: 1px solid rgba(26,23,20,0.16);
     background: var(--accent);
     border-radius: 999px;
-    padding: 14px 20px;
+    padding: 14px 22px;
     align-self: flex-start;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .founder-link:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 26px rgba(26,23,20,0.12);
+    box-shadow: 0 12px 28px rgba(26,23,20,0.14);
   }
   @media (max-width: 860px) {
-    .founder { padding: 80px 28px; }
+    .founder { padding: 88px 28px; }
     .founder-inner {
       grid-template-columns: 1fr;
-      gap: 36px;
+      gap: 0;
     }
     .founder-photo-col {
-      max-width: 320px;
-      margin: 0 auto;
+      aspect-ratio: 1 / 1;
+      min-height: auto;
+      padding: 22px;
     }
-    .founder-text-col { padding: 40px 28px; }
+    .founder-text-col { padding: 38px 28px 34px; }
     .founder-headline { font-size: clamp(34px, 11vw, 56px); }
     .founder-link { width: 100%; text-align: center; justify-content: center; }
   }
